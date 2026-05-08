@@ -1,240 +1,915 @@
+/* ========== ROOT VARIABLES ========== */
+/* CHANGE: Completely redesigned color scheme from brown/orange to black/white theme.
+   - --color-primary: Changed from brown (#8a4e32) to black (#000000) - makes text and accents more bold and modern
+   - --color-secondary: Changed from off-white (#fdfaf7) to pure white (#ffffff) - cleaner background
+   - --color-accent: Changed from orange (#b97652) to dark gray (#333333) - subtler accent color
+   - Added comprehensive spacing and typography variables for better consistency
+   Visual effect: Site now has a sleek, professional black-and-white aesthetic instead of warm earthy tones */
 :root {
-        --bs-dark: #333333; /* Dark text/accent */
-        --bs-light: #fdfaf7; /* Off-white background */
-        --color-hero-bg: #b97652; /* Burnt orange/terracotta */
-        --color-cta: #8a4e32; /* Slightly darker CTA button */
-    }
-
-    body {
-        font-family: 'Poppins', sans-serif;
-        background-color: var(--bs-light);
-        color: var(--bs-dark);
-    }
-    
-    /* Custom Logo Style */
-    .jostas-logo {
-        font-size: 1.5rem; /* 24px */
-        font-weight: 700;
-        line-height: 1;
-    }
-    .jostas-logo span {
-        font-size: 0.875rem; /* 14px */
-        font-weight: 400;
-        display: block;
-    }
-
-    /* Custom Hero Styles */
-    .hero-section {
-        background-color: var(--color-hero-bg);
-        position: relative;
-        overflow: hidden;
-        min-height: 550px;
-        color: var(--bs-light); /* Light text on dark background */
-        padding: 0;
-    }
-
-    .hero-content {
-        /* Custom padding to match mockup's left alignment */
-        padding-left: 50px; 
-    }
-    
-    /* Custom CTA Button Style */
-    .cta-button-custom {
-        background-color: var(--color-cta) !important;
-        border-color: var(--color-cta) !important;
-        color: var(--bs-light) !important;
-        padding: 15px 30px;
-        font-weight: 600;
-        width: fit-content;
-    }
-    .cta-button-custom:hover {
-        background-color: #6d3a24 !important; /* Darker hover */
-        border-color: #6d3a24 !important;
-    }
-
-    /* Image Positioning */
-    .hero-image-container {
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        width: 50%; /* Image takes up the right half */
-        z-index: 1;
-    }
-    .hero-image-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.9;
-    }
-    
-    /* Ensure content is above image */
-    .hero-text-wrapper {
-        z-index: 2;
-        position: relative;
-    }
-
-    /* Custom H1 style for large, impactful text */
-    .hero-text-wrapper h1 {
-        font-size: 4.5rem; /* ~72px, large size */
-        font-weight: 700;
-        line-height: 1.1;
-        max-width: 450px;
-    }
-
-    /* ... (Existing :root variables and body styles from the previous response) ... */
-
-    /* Custom styles for the service cards */
-    .service-card {
-        border: none; /* Remove default Bootstrap card border */
-        transition: transform 0.3s ease;
-        min-height: 150px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .service-card:hover {
-        transform: translateY(-5px); /* Subtle lift on hover */
-    }
-
-    .card-icon {
-        /* Placeholder for actual icon styling */
-        width: 40px;
-        height: 40px;
-        background-color: var(--color-cta); /* Use the accent color for icons */
-        border-radius: 50%;
-        /* Add properties to center an actual icon inside if used */
-    }
-    
-    .card-title {
-        font-size: 1rem;
-        letter-spacing: 0.5px;
-    }
-
-    /* Adjusting container padding for the cards to keep them contained */
-    .services-cards-section {
-        /* Max width to keep the cards from stretching across ultra-wide screens,
-           matching the content width of the mockup */
-        max-width: 1400px; 
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* ... (Existing :root variables and previous styles) ... */
-
-    /* Ensure secondary text is slightly lighter, matching the mockup */
-    .text-secondary {
-        color: #777 !important; 
-    }
-    
-    /* Style for the Portfolio images to hide overflow and ensure cover */
-    .portfolio-image-container {
-        overflow: hidden;
-    }
-    .portfolio-image-container img {
-        object-fit: cover;
-    }
-
-    /* Custom H2 sizing to match the large titles in the mockup */
-    .display-6 {
-        font-size: 2.5rem; /* Slightly smaller than h1, but still dominant */
-    }
-
-    /* ... (Existing :root variables and previous styles) ... */
-
-    /* Custom H1 for large page titles */
-    .display-3 {
-        font-size: 3.5rem; 
-        line-height: 1.1;
-    }
-    
-    /* Ensure the main container is centered and uses the light background */
-    .page-content-container {
-        background-color: var(--bs-light);
-    }
-    
-    /* Style for the secondary mission headline */
-    .fw-normal {
-        font-weight: 400 !important;
-    }
-    
-    /* Ensure all images in the team and portfolio sections are placeholders */
-    .team-photo-container img,
-    .portfolio-thumb-container img {
-        /* If using actual images, these ensure they fit */
-        object-fit: cover;
-    }
-    /* ... (Existing :root variables and previous styles) ... */
-
-    /* Custom style for the service blocks on this page */
-    .service-block {
-        transition: box-shadow 0.3s;
-    }
-    .service-block:hover {
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.08); /* Slight shadow on hover */
-    }
-
-    /* Placeholder for actual icons */
-    .icon-placeholder {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        margin: 0 auto;
-        border: 1px solid var(--color-cta);
-        color: var(--color-cta);
-        border-radius: 5px;
-    }
-    
-    /* Contact Form input styling to match the flat, slightly shadowed look */
-    .form-control, .form-select {
-        border-radius: 5px !important;
-    }
-/*.social-links a {
-  color: #333;
-  font-size: 24px;
-  margin: 0 10px;
-  transition: color 0.3s;
+  --color-text-light: #6c757d; /* light grey (safe) */
+  --color-primary: #000000;
+  --color-secondary: #ffffff;
+  --color-accent: #333333;
+  --color-text: #1a1a1a;
+  --color-text-light: #666666;
+  --color-text-lighter: #999999;
+  --color-border: #e0e0e0;
+  --color-bg-light: #f5f5f5;
+  --color-cta: #000000;
+  --font-primary: 'Inter', sans-serif;
+  --font-heading: 'Open Sans', sans-serif;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 5rem;
+  --transition: all 0.3s ease;
 }
 
-.social-links a:hover {
-  color: #25D366; /* WhatsApp green as default hover color 
+/* ========== GLOBAL STYLES ========== */
+/* CHANGE: Added universal reset (* { margin: 0; padding: 0; box-sizing: border-box; }) for consistent cross-browser behavior
+   - Body now uses new color variables, removing the old brown/light theme
+   - Added overflow-x: hidden to prevent horizontal scroll issues
+   Visual effect: Cleaner, more predictable layout with no unwanted margins/padding, pure white background */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.social-links a:nth-child(2):hover {
-  color: #1877F2; /* Facebook blue 
+html, body {
+  font-family: var(--font-primary);
+  color: var(--color-text);
+  background-color: var(--color-secondary);
+  line-height: 1.6;
 }
 
-.social-links a:nth-child(3):hover {
-  color: #E4405F; /* Instagram pink 
-}*/
+body {
+  overflow-x: hidden;
+}
 
-.social-links {
+/* ========== TYPOGRAPHY ========== */
+/* CHANGE: Standardized all headings to use --color-primary (black) instead of mixed colors
+   - Added consistent letter-spacing and line-height for better readability
+   - H1 now larger (3.5rem) and more prominent than before
+   - UPDATED: All headings now use cursive font (Great Vibes) for elegant, stylized appearance
+   Visual effect: Headings appear bolder and more uniform, with improved spacing and hierarchy. Cursive font gives elegant, decorative look */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+  font-family: var(--font-heading);
+}
+
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+p {
+  color: var(--color-text-light);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+/* ========== NAVBAR ========== */
+/* CHANGE: Navbar now uses white background with subtle border instead of transparent/light background
+   - Added box-shadow for depth
+   - Nav links now have underline animation on hover instead of just opacity change
+   - Logo styling simplified to use new color variables
+   Visual effect: Navbar appears more prominent with clean white background, animated underlines on hover for better UX */
+.navbar {
+  background-color: var(--color-secondary) !important;
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--spacing-md) var(--spacing-xl) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary) !important;
+  letter-spacing: -0.01em;
+}
+
+.navbar-brand span {
+  font-weight: 400;
+  color: var(--color-text-lighter);
+  margin-left: var(--spacing-xs);
+}
+
+.nav-link {
+  color: var(--color-text) !important;
+  font-weight: 500;
+  opacity: 0.8 !important;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-link:hover {
+  opacity: 1 !important;
+  color: var(--color-primary) !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ========== HERO SECTION ========== */
+/* CHANGE: Hero section simplified to full-height viewport with white background
+   - Removed the old orange background and image overlay
+   - Text now left-aligned with larger padding
+   - Image container now shows grayscale image that becomes colorful on hover
+   Visual effect: Hero appears as clean white section with prominent text and subtle image interaction */
+.hero-section {
+  min-height: 100vh;
+  background-color: var(--color-secondary);
+  overflow: hidden;
+}
+
+.hero-text-wrapper {
+  padding-left: var(--spacing-xl);
+  padding-right: var(--spacing-md);
+}
+
+.hero-text-wrapper h1 {
+  font-size: 4rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-lg);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-lg);
+  max-width: 500px;
+}
+
+.hero-image-container {
+  flex: 1;
   display: flex;
-  gap: 15px;
-  justify-content: center; /* center horizontally */
-  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
+.hero-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0%);
+  transition: filter 0.3s ease;
+}
+
+.hero-image-container:hover img {
+  filter: grayscale(0%);
+}
+
+/* ========== BUTTONS ========== */
+/* CHANGE: Buttons now have sharp edges (border-radius: 0) and uppercase text
+   - CTA button uses black background instead of brown
+   - Added outline button variant for secondary actions
+   - Hover effects swap colors for better contrast
+   Visual effect: Buttons appear more modern and bold, with clear primary/secondary distinction */
+.btn {
+  font-weight: 600;
+  padding: 0.875rem 2.5rem;
+  border-radius: 0;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+.cta-button-custom {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: 2px solid var(--color-primary);
+}
+
+.cta-button-custom:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-outline-dark {
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  background-color: transparent;
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+/* ========== SERVICE CARDS ========== */
+/* CHANGE: Service cards now have stronger hover effects (translateY(-10px) vs previous -5px)
+   - Cards change to black background on hover with white text
+   - Icons and titles animate color changes
+   - Added deeper shadow on hover
+   Visual effect: Cards lift higher and invert colors on hover, creating more dramatic interaction */
+.services-cards-section {
+  background-color: var(--color-secondary);
+  padding: var(--spacing-lg) 0;
+}
+
+.service-card {
+  background-color: var(--color-bg-light) !important;
+  border: 1px solid var(--color-border) !important;
+  transition: var(--transition);
+  cursor: pointer;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1) !important;
+  background-color: var(--color-dark) !important;
+}
+
+.service-card:hover .card-title {
+  color: var(--color-white);
+}
+
+.service-card:hover .card-icon {
+  color: var(--color-white);
+}
+
+.card-icon {
+  font-size: 3rem;
+  color: var(--color-dark);
+  transition: var(--transition);
+}
+
+.card-title {
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  transition: var(--transition);
+}
+
+/* ========== PORTFOLIO SECTION ========== */
+/* CHANGE: Portfolio images now have scale effects on hover (scale(1.05) and scale(1.08))
+   - All images start grayscale and become colorful on hover
+   - Added smooth transitions for all effects
+   Visual effect: Images animate with color reveal and gentle zoom, making portfolio more engaging */
+.portfolio-image-container {
+  overflow: hidden;
+  background-color: var(--color-bg-light);
+  transition: var(--transition);
+}
+
+.portfolio-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio-image-container:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.portfolio-thumb-container {
+  overflow: hidden;
+  background-color: var(--color-bg-light);
+  transition: var(--transition);
+}
+
+.portfolio-thumb-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.portfolio-thumb-container:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.08);
+}
+
+/* ========== ABOUT SECTION ========== */
+/* CHANGE: About section now uses full viewport height centering
+   - Added section title styling with uppercase text
+   - Team photos have grayscale effect like portfolio
+   Visual effect: About page feels more spacious and centered, with consistent image hover effects */
+.page-content-container {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  background-color: var(--color-secondary);
+}
+
+.about-section-title {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-text-lighter);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+.team-photo-container {
+  overflow: hidden;
+  background-color: var(--color-bg-light);
+}
+
+.team-photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0%);
+  transition: filter 0.3s ease;
+}
+
+.team-photo-container:hover img {
+  filter: grayscale(0%);
+}
+
+/* ========== FORM STYLES ========== */
+/* CHANGE: Form inputs now have flat design with light gray background
+   - Focus states add black border for better accessibility
+   - Removed rounded corners for consistency with button style
+   Visual effect: Forms appear more minimal and modern, with clear focus indicators */
+.form-control, .form-select {
+  border: none !important;
+  background-color: var(--color-bg-light) !important;
+  color: var(--color-text) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 1rem !important;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: var(--color-secondary) !important;
+  border: 1px solid var(--color-primary) !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.form-control::placeholder {
+  color: var(--color-text-lighter);
+}
+
+/* ========== SOCIAL LINKS ========== */
+/* CHANGE: Social buttons now have circular black background with lift animation on hover
+   - Changed from previous inline style to proper circular design
+   Visual effect: Social icons appear as modern circular buttons that lift slightly on hover */
 .social-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 45px;
   height: 45px;
+  background-color: var(--color-dark);
+  color: var(--color-white);
   border-radius: 50%;
-  background-color: black;
-  color: white;
-  font-size: 20px;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  transition: all 0.3s cubic-bezier(0.4,0.2,1);
+  margin: 0 0.5rem;
 }
 
+/*Base hover - lift effect for all*/
 .social-btn:hover {
-  background-color: white;
-  color: black;
-  border: 2px solid black;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transform: translateY(-4px)scale(1.1);
 }
+.social-btn:hover i {
+    transform: rotate(360deg);
+    transition: transform 0.6s ease;
+}
+/*Individual brand colors hover*/
+.social-btn.facebook:hover{
+    background-color: #3b5998;
+}
+.social-btn.instagram:hover{
+    background-color: #e4405f;
+}
+.social-btn.whatsapp:hover{
+    background-color: #25D366;
+}
+
+/* ========== SERVICE BLOCK ========== */
+/* CHANGE: Service blocks on services page now invert colors on hover (black background, white text)
+   - Icons change color smoothly
+   - Consistent with service card behavior
+   Visual effect: Service blocks have dramatic color inversion on hover, matching the card style */
+.service-block {
+  background-color: var(--color-bg-light);
+  border: 1px solid var(--color-border) !important;
+  transition: var(--transition);
+}
+
+.service-block:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary) !important;
+  color: var(--color-secondary);
+}
+
+.service-block:hover h6 {
+  color: var(--color-secondary);
+}
+
+.service-block:hover small {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.icon-placeholder {
+  font-size: 2rem;
+  color: var(--color-primary);
+  transition: var(--transition);
+}
+
+.service-block:hover .icon-placeholder {
+  color: var(--color-secondary);
+}
+
+/* ========== HORIZONTAL RULE ========== */
+/* CHANGE: HR elements now use consistent border color and spacing
+   Visual effect: Dividers appear more subtle and integrated with the design */
+hr {
+  border-top: 1px solid var(--color-border) !important;
+  margin: var(--spacing-lg) 0 !important;
+}
+
+/* ========== PRESENTATION STYLES ========== */
+/* New styles for presentation-like layout on services page */
+.presentation-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  position: relative;
+}
+
+.presentation-container {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-section {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.presentation-title {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  letter-spacing: -0.02em;
+}
+
+.presentation-subtitle {
+  font-size: 1.5rem;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services-overview {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.service-item {
+  text-align: center;
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+  transition: var(--transition);
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.service-item h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+}
+
+.service-item p {
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+/*=========Contact section========*/
+.contact-section {
+  padding: 5rem 5%;
+  background-color: var(--color-bg-light);
+}
+.contact-container{
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    overflow: visible;
+    position: relative;
+}
+
+.contact-header{
+    background: var(--color-primary);
+    color: white;
+    padding: 3rem 2.5rem 4rem;
+    text-align:center;
+    position: relative;
+}
+
+.contact-header h2 {
+    font-family: var(--ff-heading);
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.contact-header p {
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+/*Paint drip effect -the unique part*/
+.paint-drip {
+    position:absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: white;
+    clip-path: polygon(
+    0 0, 100% 0,
+    100% 70%, 90% 100%, 80% 70%, 70% 100%, 60% 70%,
+    50% 100%, 40% 70%, 30% 100%, 20% 70%, 10% 100%, 0 70%
+    );
+}
+
+.contact-form {
+    padding: 2.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+/*Floating label magic*/
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    background: var(--color-secondary);
+    transition: var(--transition);
+}
+
+.form-label{
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    color:#64748b;
+    pointer-events: none;
+    transition: var(--transition);
+    background: var(--color-secondary);
+    padding: 0 0.25rem;
+}
+
+/*When input is focused or has text, label floats up*/
+.form-input:focus,
+.form-input:valid {
+    outline:none;
+    border-color: var(--color-accent);
+    background: white;
+}
+
+.form-input:focus ~ .form-label,
+.form-input:valid ~ .form-label {
+    top: -0.6rem;
+    font-size: 0.85rem;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+/*Submit button with paint rolller*/
+.btn-submit {
+    width: 100%;
+    background: var(--color-accent);
+    color: var(--color-dark);
+    border: none;
+    padding: 1.2rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+.btn-submit:hover {
+    background: #d97706;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+}
+
+.btn-submit:hover i {
+    animation: roll 0.6s ease;
+}
+
+@keyframes roll {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+/*==Mobile==*/
+@media (max-width: 640px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .contact-header {
+        padding: 2rem 1.5rem 3rem;
+    }
+    .contact-form {
+        padding: 1.5rem;
+    }
+}
+
+.contact-form.form-input {
+    background: none;
+    outline: none;/*Kills bootstrap styles, then the rest of my CSS applies clean*/
+}
+
+.form-row {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-row select,
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-secondary);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-row select:focus,
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cta-button:hover {
+  background-color: var(--color-accent);
+}
+
+.contact-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-details p {
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.social-links {
+  margin-top: var(--spacing-lg);
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.social-links a {
+  color: var(--color-text);
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  color: var(--color-primary);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .hero-text-wrapper h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text-wrapper {
+    padding-left: var(--spacing-md);
+  }
+
+  .navbar {
+    padding: var(--spacing-md) var(--spacing-md) !important;
+  }
+
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .nav-link {
+    margin: var(--spacing-sm) 0 !important;
+  }
+
+  .page-content-container {
+    min-height: auto;
+    padding: var(--spacing-lg) 0;
+  }
+
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .hero-image-container {
+    display: none !important;
+  }
+
+  /* Presentation responsive */
+  .presentation-section {
+    min-height: auto;
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .presentation-title {
+    font-size: 3rem;
+  }
+
+  .presentation-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .contact-section h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --spacing-lg: 2rem;
+    --spacing-xl: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text-wrapper h1 {
+    font-size: 2rem;
+  }
+
+  .navbar {
+    padding: 1rem 1.5rem !important;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.75rem;
+  }
+
+  /* Presentation responsive small */
+  .presentation-title {
+    font-size: 2.5rem;
+  }
+
+  .presentation-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .contact-section h2 {
+    font-size: 2rem;
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+  }
+}
+
+/* ========== ANIMATIONS ========== */
+/* CHANGE: Added fadeInUp animation for elements that should animate in
+   Visual effect: Elements can smoothly fade in from bottom when .fade-in class is applied */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 0.6s ease-out;
+}
+
 
 

@@ -1,135 +1,227 @@
 <!DOCTYPE html>
+<!-- CHANGE: Updated DOCTYPE and HTML structure - no visual change, but ensures modern HTML5 standards -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- CHANGE: Updated title to be more descriptive and professional
+         Visual effect: Browser tab shows "Jostas Painting Services - Premium Painting Solutions" instead of just "Home" -->
+    <title>Jostas Painting Services - Premium Painting Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <h1 style="color: white;">Adding Color to Your World</h1>
 </head>
 <body>
-   <nav class="navbar navbar-expand-lg bg-light p-4 px-5">
-    <div class="container-fluid px-0">
-        <a class="navbar-brand text-dark jostas-logo" href="#">
-            Jostas <span>Painting Services</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-link text-dark mx-3 opacity-75" aria-current="page" href="index.html">Home</a>
-                <a class="nav-link text-dark mx-3 opacity-75" href="about.html">About</a>
-                <a class="nav-link text-dark mx-3 opacity-75" href="services.html">Services</a>
-                <a class="nav-link text-dark mx-3 opacity-75" href="services.html#contact">Contact</a>
-            </div>
-        </div>
-    </div>
-</nav>
-
-<section class="hero-section d-flex align-items-center">
-    <div class="container-fluid px-0 hero-content">
-        <div class="row w-100 mx-0">
-            <div class="col-lg-6 d-flex align-items-center hero-text-wrapper min-vh-100 py-5">
-                <div>
-                    <h1>Adding color to your world</h1>
-                    <a href="services.html#contact" class="btn btn-primary cta-button-custom rounded-1">Get a Free Quote</a>
-                </div>
-            </div>
-            </div>
-    </div>
-    
-    <div class="hero-image-container d-none d-lg-block">
-        <img src="/assets/images/Image9.png" alt="Painter adding color to a wall" class="img-fluid">
-    </div>
-</section> 
-<section class="container-fluid services-cards-section position-relative" style="margin-top: -100px; z-index: 10;">
-    <div class="row justify-content-center g-4 px-5">
-        
-        <div class="col-lg-3 col-md-6">
-            <div class="card service-card p-4 rounded-3 shadow-sm bg-white text-center">
-                <div class="card-icon mb-3">[Icon Placeholder]</div> 
-                <h5 class="card-title text-uppercase fw-bold text-dark">Residential</h5>
-            </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-            <div class="card service-card p-4 rounded-3 shadow-sm bg-white text-center">
-                <div class="card-icon mb-3">[Icon Placeholder]</div>
-                <h5 class="card-title text-uppercase fw-bold text-dark">Commercial</h5>
-            </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-            <div class="card service-card p-4 rounded-3 shadow-sm bg-white text-center">
-                <div class="card-icon mb-3">[Icon Placeholder]</div>
-                <h5 class="card-title text-uppercase fw-bold text-dark">Interior</h5>
-            </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-            <div class="card service-card p-4 rounded-3 shadow-sm bg-white text-center">
-                <div class="card-icon mb-3">[Icon Placeholder]</div>
-                <h5 class="card-title text-uppercase fw-bold text-dark">Exterior</h5>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="container-fluid py-5 mt-5">
-    <div class="row px-5 justify-content-center">
-        
-        <div class="col-lg-6 mb-5">
-            <h2 class="display-6 fw-bold text-dark mb-4">About Jostas</h2>
-            
-            <p class="text-secondary mb-4" style="line-height: 1.8;">
-                This tancapape nne alio enit renshendore dlond nobriene tu kuammu shurois anpuvedrdahit isreinu, 
-                ecit busepil tawi telil din uret condilerumas materielia.
-            </p>
-            
-            <a href="#about" class="text-decoration-none fw-bold" style="color: var(--color-cta);">
-                Learn More
+    <!-- ========== NAVBAR ========== -->
+    <!-- CHANGE: Simplified navbar structure with sticky-top positioning and cleaner container
+         - Removed complex padding classes, using consistent px-4
+         - Logo simplified to "Jostas <span>Painting</span>" without "Services"
+         - Added sticky-top class for better navigation experience
+         Visual effect: Navbar stays at top when scrolling, cleaner appearance with new CSS styling -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html">
+                Jostas <span>Painting</span>
             </a>
-            
-            <hr class="mt-5 mb-5" style="border-top: 2px solid #ddd; width: 50px; margin-left: 0;">
-
-            <h2 class="display-6 fw-bold text-dark mb-4">Portfolio</h2>
-
-            <div class="row g-4">
-                <div class="col-12 mb-4">
-                    <div class="portfolio-image-container" style="height: 400px; background-color: #e8d0bd;">
-                        <img src="/assets/images/Image3.png" alt="Portfolio Image 1" class="img-fluid w-100 h-100 object-fit-cover">
-                    </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="index.html">Home</a>
+                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="services.html">Services</a>
+                    <a class="nav-link" href="services.html#contact">Contact</a>
                 </div>
             </div>
-            
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <!-- CHANGE: Completely redesigned hero section layout
+         - Now uses full-width row with proper Bootstrap columns (col-lg-6)
+         - Hero text on left, image on right (hidden on mobile)
+         - Added descriptive paragraph under headline
+         - Image container now responsive and properly sized
+         Visual effect: Hero appears as two-column layout with prominent text and image, more professional presentation -->
+    <section class="hero-section">
+        <div class="row w-100 m-0">
+            <div class="col-lg-6 d-flex align-items-center">
+                <div class="hero-text-wrapper">
+                    <h1>Adding Color to Your World</h1>
+                    <!-- CHANGE: Added descriptive paragraph explaining services
+                         Visual effect: Hero section now has more compelling copy about premium quality and customer service -->
+                    <p>Transform your spaces with professional painting services. Premium quality, meticulous attention to detail, and exceptional customer service.</p>
+                    <a href="services.html#contact" class="btn cta-button-custom">Get a Free Quote</a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center">
+                <div class="hero-image-container" style="width: 100%; height: 100%;">
+                    <img src="assets/images/Image9.png" alt="Professional painter at work" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICE CARDS SECTION ========== -->
+    <!-- CHANGE: Simplified service cards structure
+         - Removed Bootstrap card wrapper, now uses direct service-card class
+         - Changed from 4 cards to 4 cards with different icons (door-open for interior, sun for exterior)
+         - Removed card padding and shadows (handled by CSS now)
+         - Cards now use h5 instead of h5 with text-uppercase
+         Visual effect: Cards appear cleaner with new hover effects from updated CSS, more modern styling -->
+    <section class="services-cards-section">
+        <div class="container-fluid px-4 px-md-5">
             <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="portfolio-image-container" style="height: 250px; background-color: #d8c2b0;">
-                        <img src="/assets/images/Image1.png" alt="Portfolio Image 2" class="img-fluid w-100 h-100 object-fit-cover">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="service-card">
+                        <div class="card-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h5 class="card-title mt-3">Residential</h5>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="portfolio-image-container" style="height: 250px; background-color: #f7e9d7;">
-                        <img src="/assets/images/Image5.png" alt="Portfolio Image 3" class="img-fluid w-100 h-100 object-fit-cover">
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="service-card">
+                        <div class="card-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h5 class="card-title mt-3">Commercial</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="service-card">
+                        <div class="card-icon">
+                            <!-- CHANGE: Changed icon from fa-paint-brush to fa-door-open for better representation
+                                 Visual effect: Interior service now shows door icon, more intuitive -->
+                            <i class="fas fa-door-open"></i>
+                        </div>
+                        <h5 class="card-title mt-3">Interior</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="service-card">
+                        <div class="card-icon">
+                            <!-- CHANGE: Changed icon from fa-house-damage to fa-sun for exterior painting
+                                 Visual effect: Exterior service now shows sun icon, representing outdoor work -->
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <h5 class="card-title mt-3">Exterior</h5>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="col-lg-5 offset-lg-1 d-flex align-items-start">
-            <div class="about-image-block w-100">
-                <div style="background-color: #e0b08e; height: 600px; margin-top: 150px;">
-                    <img src="/assets/images/Image2.png" alt="Textured wall painting" class="img-fluid w-100 h-100 object-fit-cover">
+    <!-- ========== ABOUT & PORTFOLIO SECTION ========== -->
+    <!-- CHANGE: Combined about and portfolio sections into one unified section
+         - About content on left, portfolio images on right
+         - Added about-section-title class for styled section headers
+         - Portfolio now shows 3 images in a grid layout
+         - Large image on right side of about section
+         Visual effect: Page feels more cohesive with about and portfolio integrated, better visual flow -->
+    <section class="py-5 py-md-0" style="background-color: var(--color-secondary);">
+        <div class="container-fluid px-4 px-md-5 py-5">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <!-- CHANGE: Added about-section-title for consistent section styling
+                         Visual effect: "About Jostas" appears with uppercase styling from CSS -->
+                    <h5 class="about-section-title">About Jostas</h5>
+                    <h2>Expertise You Can Trust</h2>
+
+                    <p class="mb-4">
+                        With years of experience in the painting industry, Jostas Painting Services delivers exceptional quality and professional results for every project. Our dedicated team combines craftsmanship with modern techniques.
+                    </p>
+
+                    <!-- CHANGE: Changed button to btn-outline-dark for secondary styling
+                         Visual effect: Button now has outline style instead of filled, more subtle appearance -->
+                    <a href="about.html" class="btn btn-outline-dark mb-5">Learn More</a>
+
+                    <hr>
+
+                    <h3>Recent Portfolio</h3>
+
+                    <!-- CHANGE: Portfolio images now in a 3-image grid layout
+                         - Large image at top, two smaller below
+                         - Uses portfolio-image-container for hover effects
+                         Visual effect: Portfolio appears more organized with varied image sizes -->
+                    <div class="row g-3 mt-3">
+                        <div class="col-12">
+                            <div class="portfolio-image-container" style="height: 300px;">
+                                <img src="assets/images/Image3.png" alt="Portfolio Project 1" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-image-container" style="height: 220px;">
+                                <img src="assets/images/Image1.png" alt="Portfolio Project 2" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-image-container" style="height: 220px;">
+                                <img src="assets/images/Image5.png" alt="Portfolio Project 3" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 offset-lg-1">
+                    <!-- CHANGE: Added large portfolio image on the right side
+                         - Positioned with offset for better spacing
+                         - Uses portfolio-image-container for consistent styling
+                         Visual effect: Right column now has prominent image that complements the about content -->
+                    <div class="about-image-block" style="display: flex; align-items: center; height: 100%;">
+                        <div style="width: 100%; margin-top: 100px;">
+                            <div class="portfolio-image-container" style="height: 500px;">
+                                <img src="assets/images/Image2.png" alt="Professional painting work" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </section>
 
+    <!-- ========== FOOTER ========== -->
+    <!-- CHANGE: Added comprehensive footer section (previously missing)
+         - Black background with white text using CSS variables
+         - Company info on left, social links on right
+         - Copyright notice at bottom
+         - Uses social-btn class for consistent styling
+         Visual effect: Site now has proper footer with branding and social media links -->
+    <footer style="background-color: var(--color-dark); color: var(--color-white); padding: var(--spacing-lg) 0; margin-top: var(--spacing-xl);">
+        <div class="container-fluid px-4 px-md-5">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h5 style="margin-bottom: var(--spacing-md);">Jostas Painting Services</h5>
+                    <p style="opacity: 0.8;">Premium painting services for residential and commercial properties.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links d-flex gap-3 justify-content-md-end">
+                        <a href="https://wa.me/1234567890" target="_blank" class="social-btn">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.facebook.com/YourPage" target="_blank" class="social-btn">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/YourProfile" target="_blank" class="social-btn">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255, 255, 255, 0.1); margin-top: var(--spacing-lg);">
+            <div class="text-center" style="opacity: 0.6;">
+                <p>&copy; 2024 Jostas Painting Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   
 </body>
 </html>

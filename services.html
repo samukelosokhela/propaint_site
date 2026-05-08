@@ -38,7 +38,9 @@
                 
                 <div class="col-6 col-md-4">
                     <div class="service-block text-center p-3 rounded-3" style="background-color: #f7f3ed; border: 1px solid #eee;">
-                        <div class="icon-placeholder mb-2">[Icon]</div>
+                        <div class="icon-placeholder mb-2">
+                            <i class="fa-solid fa-house-user"></i>
+                        </div>
                         <h6 class="fw-bold text-uppercase mb-1">Residential</h6>
                         <small class="text-secondary d-block">Details overview text, and so on.</small>
                     </div>
@@ -46,7 +48,9 @@
                 
                 <div class="col-6 col-md-4">
                     <div class="service-block text-center p-3 rounded-3" style="background-color: #f7f3ed; border: 1px solid #eee;">
-                        <div class="icon-placeholder mb-2">[Icon]</div>
+                        <div class="icon-placeholder mb-2">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
                         <h6 class="fw-bold text-uppercase mb-1">Commercial</h6>
                         <small class="text-secondary d-block">Details overview text, and so on.</small>
                     </div>
@@ -54,7 +58,9 @@
                 
                 <div class="col-6 col-md-4">
                     <div class="service-block text-center p-3 rounded-3" style="background-color: #f7f3ed; border: 1px solid #eee;">
-                        <div class="icon-placeholder mb-2">[Icon]</div>
+                        <div class="icon-placeholder mb-2">
+                            <i class="fa-solid fa-couch"></i>
+                        </div>
                         <h6 class="fw-bold text-uppercase mb-1">Interior</h6>
                         <small class="text-secondary d-block">Details overview text, and so on.</small>
                     </div>
@@ -62,7 +68,9 @@
 
                 <div class="col-6 col-md-4">
                     <div class="service-block text-center p-3 rounded-3" style="background-color: #f7f3ed; border: 1px solid #eee;">
-                        <div class="icon-placeholder mb-2">[Icon]</div>
+                        <div class="icon-placeholder mb-2">
+                            <i class="fa-solid fa-paint-roller"></i>
+                        </div>
                         <h6 class="fw-bold text-uppercase mb-1">Exterior</h6>
                         <small class="text-secondary d-block">Details overview text, and so on.</small>
                     </div>
@@ -70,7 +78,9 @@
 
                 <div class="col-6 col-md-4">
                     <div class="service-block text-center p-3 rounded-3" style="background-color: #f7f3ed; border: 1px solid #eee;">
-                        <div class="icon-placeholder mb-2">[Icon]</div>
+                        <div class="icon-placeholder mb-2">
+                            <i class="fa-solid fa-scroll"></i>
+                        </div>
                         <h6 class="fw-bold text-uppercase mb-1">Wallpaper</h6>
                         <small class="text-secondary d-block">Details overview text, and so on.</small>
                     </div>
@@ -78,51 +88,68 @@
 
                 <div class="col-6 col-md-4">
                     <div class="service-block text-center p-3 rounded-3" style="background-color: #f7f3ed; border: 1px solid #eee;">
-                        <div class="icon-placeholder mb-2">[Icon]</div>
+                        <div class="icon-placeholder mb-2">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
                         <h6 class="fw-bold text-uppercase mb-1">Color Consultation</h6>
                         <small class="text-secondary d-block">Details overview text, and so on.</small>
                     </div>
                 </div>
-            </div> <hr class="my-5" style="border-top: 2px solid #eee;">
+            </div> 
 
-            <h2 class="display-6 fw-bold text-dark mb-4">Get in touch</h2>
-
-            <form>
-                <div class="form-group mb-3">
-                    <select class="form-select border-0 bg-white shadow-sm" style="height: 50px; color: var(--bs-dark); opacity: 0.8;">
-                        <option selected>Service</option>
-                        <option>Residential</option>
-                        <option>Commercial</option>
-                        <option>Color Consultation</option>
-                    </select>
-                </div>
-                
-                <div class="form-group mb-3">
-                    <textarea class="form-control border-0 bg-white shadow-sm" rows="3" placeholder="Please provide more details about your request"></textarea>
-                </div>
-
-                <div class="contact-details-list mb-4" id="contact">
-                    <input type="text" class="form-control mb-2 border-0 bg-white shadow-sm" placeholder="Name">
-                    <input type="email" class="form-control mb-2 border-0 bg-white shadow-sm" placeholder="Email">
-                    <input type="tel" class="form-control mb-2 border-0 bg-white shadow-sm" placeholder="Phone">
-                </div>
-
-                <div class="d-flex justify-content-between align-items-center">
-                    <div class="social-links d-flex gap-3">
-                    <a href="https://wa.me/1234567890" target="_blank" class="social-btn">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-  <a href="https://www.facebook.com/YourPage" target="_blank" class="social-btn">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-  <a href="https://www.instagram.com/YourProfile" target="_blank" class="social-btn">
-    <i class="fab fa-instagram"></i>
-  </a>
-                        
+            <section class="contact-section">
+                <div class="contact-container">
+                    <div class="contact-header">
+                        <h2>let's Paint Your Vision</h2>
+                        <p>Got a project? Drop your details and we'll send a free quote within 24hrs.</p>
+                        <div class="paint-drip"></div>
                     </div>
-                    <button type="submit" class="btn cta-button-custom rounded-1" style="width: 100px;">Send</button>
+
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <select class="form-input" id="service" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="residential">Residential</option>
+                                <option value="commercial">Commercial</option>
+                                <option value="interior">Interior</option>
+                                <option value="exterior">Exterior</option>
+                            </select>
+                            <label for="service" class="from-label">Service Needed</label>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea class="form-input" id="details" rows="4" required></textarea>
+                            <label for="details" class="from-label">Project Details</label>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" class="form-input" id="name" required>
+                                <label for="name" class="from-label">Your Name</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" class="form-input" id="email" required>
+                            <label for="email" class="from-label">Email Address</label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" class="form-input" id="phone" required>
+                            <label for="phone" class="from-label">Phone Number</label>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            <span>Send My Free Quote</span>
+                            <i class="fas fa-paint-roller"></i>
+                        </button>
+
+                    </form>
                 </div>
-            </form>
+
+            </section>
+
+            
 
         </div>
     </div>
